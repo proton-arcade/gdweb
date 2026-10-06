@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#0b1030">
+<meta name="description" content="Geometry Dash Web - a browser rhythm-platformer in the style of Geometry Dash. Pure HTML5 canvas, no dependencies, works offline.">
+<title>Geometry Dash Web</title>
+<link rel="stylesheet" href="website/css/style.css">
+<link rel="icon" href="website/assets/textures/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <div id="stage">
+    <canvas id="game" width="1280" height="720" tabindex="0"></canvas>
+    <div id="loader">
+      <div id="loader-box">
+        <div id="loader-logo">GEOMETRY DASH</div>
+        <div id="loader-sub">WEB EDITION</div>
+        <div id="loader-bar"><div id="loader-fill"></div></div>
+        <div id="loader-status">Generating textures...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- load order matters: each file extends the global `gd` namespace -->
+  <script src="website/js/util.js"></script>
+  <script src="website/js/textures.js"></script>
+  <script src="website/js/levels.js"></script>
+  <script src="website/js/audio.js"></script>
+  <script src="website/js/editor.js"></script>
+  <script src="website/js/ui.js"></script>
+  <script src="website/js/game.js"></script>
+  <script src="website/js/boot.js"></script>
+</body>
+</html>
