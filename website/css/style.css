@@ -1,0 +1,97 @@
+/* ============================================================
+   Geometry Dash Web - shell styles
+   Everything visual is rendered on the canvas; CSS only handles
+   page chrome, scaling and the boot loader.
+   ============================================================ */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #05070f;
+  font-family: "Trebuchet MS", "Segoe UI", Tahoma, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: none;
+  overscroll-behavior: none;
+}
+
+#stage {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse at 50% 40%, #1b2a6b 0%, #0a1030 45%, #04060f 100%);
+}
+
+#game {
+  display: block;
+  background: #0b1030;
+  image-rendering: auto;
+  box-shadow: 0 0 0 2px rgba(255,255,255,.08), 0 18px 60px rgba(0,0,0,.7);
+  border-radius: 4px;
+  outline: none;
+  cursor: default;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+/* ---------- boot loader ---------- */
+#loader {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse at 50% 45%, #23348f 0%, #0b1136 60%, #04060f 100%);
+  z-index: 50;
+  transition: opacity .45s ease;
+}
+#loader.hidden { opacity: 0; pointer-events: none; }
+
+#loader-box { text-align: center; color: #fff; }
+
+#loader-logo {
+  font-family: Impact, "Arial Black", Haettenschweiler, sans-serif;
+  font-size: clamp(30px, 6vw, 62px);
+  letter-spacing: .06em;
+  color: #ffe14d;
+  text-shadow:
+    0 0 2px #000, 2px 2px 0 #a8480f, 4px 4px 0 #6d2c07,
+    0 0 28px rgba(255,190,40,.45);
+  transform: skewX(-6deg);
+}
+#loader-sub {
+  margin-top: 4px;
+  font-size: clamp(11px, 1.6vw, 16px);
+  letter-spacing: .55em;
+  color: #9fd0ff;
+  text-shadow: 0 0 10px rgba(80,170,255,.7);
+}
+#loader-bar {
+  margin: 26px auto 10px;
+  width: min(420px, 70vw);
+  height: 16px;
+  border: 2px solid rgba(255,255,255,.55);
+  border-radius: 9px;
+  background: rgba(0,0,0,.45);
+  overflow: hidden;
+}
+#loader-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 6px;
+  background: linear-gradient(180deg, #fff48a 0%, #ffcf33 45%, #f09000 100%);
+  box-shadow: 0 0 14px rgba(255,200,60,.8);
+  transition: width .25s ease;
+}
+#loader-status {
+  font-size: 13px;
+  color: #cfe0ff;
+  letter-spacing: .08em;
+  opacity: .9;
+}
