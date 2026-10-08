@@ -8,7 +8,11 @@ Open `index.html` and play. It also works offline and from `file://`.
 
 ```
 Geometry Dash/
+├── games/
+│   └── README.md              notes on standalone game projects
 ├── index.html                  ← open this
+├── tools/
+│   └── README.md              notes on optional developer utilities
 └── website/
     ├── css/
     │   └── style.css           page chrome, scaling, boot loader
